@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:axe/app/user/MainAxisAlignmentFlex.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -129,6 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            MainAxisAlignmentFlex(),
             const Text(
               'Hello, Flutter, Are you ok? \nYou have pushed the button this many times:',
             ),
