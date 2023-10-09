@@ -1,4 +1,7 @@
 {
-  "appTitle": "组起来吧",
-  "homeTitle": "首页"
+  "titleApp": "组起来吧",
+  "titleHome": "首页",
+  "buttonTextMatch": "比赛",
+  "buttonTextGroup": "俱乐部",
+  "buttonTextMy": "我的"
 }

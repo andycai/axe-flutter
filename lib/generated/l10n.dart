@@ -51,20 +51,50 @@ class S {
   }
 
   /// `Activity Organization`
-  String get appTitle {
+  String get titleApp {
     return Intl.message(
       'Activity Organization',
-      name: 'appTitle',
+      name: 'titleApp',
       desc: '',
       args: [],
     );
   }
 
   /// `Home`
-  String get homeTitle {
+  String get titleHome {
     return Intl.message(
       'Home',
-      name: 'homeTitle',
+      name: 'titleHome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Match`
+  String get buttonTextMatch {
+    return Intl.message(
+      'Match',
+      name: 'buttonTextMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Group`
+  String get buttonTextGroup {
+    return Intl.message(
+      'Group',
+      name: 'buttonTextGroup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `My`
+  String get buttonTextMy {
+    return Intl.message(
+      'My',
+      name: 'buttonTextMy',
       desc: '',
       args: [],
     );

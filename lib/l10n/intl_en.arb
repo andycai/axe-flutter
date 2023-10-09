@@ -1,4 +1,7 @@
 {
-  "appTitle": "Activity Organization",
-  "homeTitle": "Home"
+  "titleApp": "Activity Organization",
+  "titleHome": "Home",
+  "buttonTextMatch": "Match",
+  "buttonTextGroup": "Group",
+  "buttonTextMy": "My"
 }

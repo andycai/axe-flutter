@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:axe/app/user/MainAxisAlignmentFlex.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'app/common/common.dart';
 import 'generated/l10n.dart';
 import 'utils/locale_utils.dart';
 
@@ -58,19 +58,19 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
 
-    _timer = Timer.periodic(const Duration(milliseconds: 1000), (timer) {
-      setState(() {
-        _counter2--;
-        if (_counter2 == 0) {
-          _timer.cancel();
-        }
-      });
-    });
+    // _timer = Timer.periodic(const Duration(milliseconds: 1000), (timer) {
+    //   setState(() {
+    //     _counter2--;
+    //     if (_counter2 == 0) {
+    //       _timer.cancel();
+    //     }
+    //   });
+    // });
   }
 
   @override
   void dispose() {
-    _timer.cancel();
+    // _timer.cancel();
     super.dispose();
   }
 
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            MainAxisAlignmentFlex(),
+            // MainAxisAlignmentFlex(),
             const Text(
               'Hello, Flutter, Are you ok? \nYou have pushed the button this many times:',
             ),
@@ -103,14 +103,15 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const BottomBar()
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
