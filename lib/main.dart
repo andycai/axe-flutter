@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
       //   useMaterial3: true,
       // ),
-      home: MyHomePage(title: ''),
-      // home: MyHomePage(title: S.of(context).homeTitle),
+      // home: MyHomePage(title: ''),
+      home: MyHomePage(title: S.of(context).titleHome),
     );
   }
 }
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(S.of(context).homeTitle),
+        title: Text(S.of(context).titleHome),
       ),
       body: Center(
         child: Column(
