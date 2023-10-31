@@ -1,10 +1,10 @@
 import 'dart:async';
 
+import 'package:axe/app/common/bottom_bar.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'app/common/common.dart';
 import 'generated/l10n.dart';
 import 'utils/locale_utils.dart';
 
@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
       //   useMaterial3: true,
       // ),
-      // home: MyHomePage(title: ''),
-      home: MyHomePage(title: S.of(context).titleHome),
+      home: MyHomePage(title: ''),
+      // home: MyHomePage(title: S.of(context).titleHome),
     );
   }
 }
@@ -103,15 +103,16 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            const BottomBar()
+            // const BottomBar(),
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
+      bottomNavigationBar: const BottomBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

@@ -1,7 +1,7 @@
+import 'package:axe/app/common/dialog_about.dart';
 import 'package:flutter/material.dart';
 
 import '../../generated/l10n.dart';
-import 'dialog_about.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({super.key});
@@ -26,12 +26,12 @@ class BottomBar extends StatelessWidget {
               onPressed: () => DialogAbout.show(context)),
         ],
       ),
-      // FloatingActionButton(
-      //   onPressed: () {},
-      //   tooltip: "add activity",
-      //   elevation: 5,
-      //   child: const Icon(Icons.add, color: Colors.blue), //z-阴影盖度
-      // )
+      //     FloatingActionButton(
+      //       onPressed: () {},
+      //       tooltip: "add activity",
+      //       elevation: 5,
+      //       child: const Icon(Icons.add, color: Colors.blue), //z-阴影盖度
+      //     )
     );
   }
 //

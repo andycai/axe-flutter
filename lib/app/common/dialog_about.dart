@@ -25,7 +25,7 @@ class DialogAbout extends StatelessWidget {
         ),
         const Expanded(
             child: Text(
-          "关于",
+          "About",
           style: TextStyle(fontSize: 18),
         )),
         InkWell(
@@ -59,7 +59,7 @@ class DialogAbout extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "Power By GF·J·Toly\n张风捷特烈",
+                "Power By Test",
                 textAlign: TextAlign.center,
               ),
             ],
