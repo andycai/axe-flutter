@@ -1,6 +1,4 @@
-import 'dart:async';
-
-import 'package:axe/app/common/bottom_bar.dart';
+import 'package:axe/app/common/pure_bottom_bar.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -51,8 +49,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  int _counter2 = 100;
-  late Timer _timer;
+
+  // int _counter2 = 100;
+  // late Timer _timer;
 
   @override
   void initState() {
@@ -95,10 +94,10 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'Hello, Flutter, Are you ok? \nYou have pushed the button this many times:',
             ),
-            Text(
-              '$_counter2',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            // Text(
+            //   '$_counter2',
+            //   style: Theme.of(context).textTheme.headlineMedium,
+            // ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
@@ -107,12 +106,27 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: const BottomBar(),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+      bottomNavigationBar: _buildBottomNav(context),
+    );
+  }
+
+  Widget _buildBottomNav(BuildContext context) {
+    return const Stack(
+      children: [
+        PureBottomBar(
+          initPosition: 0,
+        ),
+        Positioned(
+          right: 26,
+          top: 8,
+          child: Center(),
+        ),
+      ],
     );
   }
 }
